@@ -1,0 +1,27 @@
+<html>
+<style>
+body {
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #84e296;
+	font-family: verdana;
+	font-size:30px;
+	color: white;
+}
+</style>
+<body>
+	<div><span id="question" /></div>
+	<button onclick="new_question()" >Volgende vraag</button>
+</body>
+<script>
+const question_span = document.getElementById("question");
+let questions = ["Nooit heb ik ooit gelogen om een politieagent.", "Nooit heb ik ooit een fort gebouwd met dekens.", "Nooit heb ik ooit geïnjecteerd of ingeslikt drugs.", "Nooit heb ik ooit het excuus 'mijn hond heeft mijn huiswerk opgegeten' gebruikt."];
+
+function new_question(){
+	question_span.innerText = questions[Math.floor(Math.random()*questions.length)]
+}
+new_question()
+</script>
+</html>
